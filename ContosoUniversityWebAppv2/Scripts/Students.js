@@ -14,16 +14,24 @@ function setupStudentsTable(studentsList) {
         var row = document.createElement("tr");
 
         var fncol = document.createElement("td");
-        fncol.innerHTML = studentsList[i].name;
+        fncol.innerHTML = studentsList[i].FirstName;
         row.appendChild(fncol);
 
         var lncol = document.createElement("td");
-        lncol.innerHTML = studentsList[i].surname;
+        lncol.innerHTML = studentsList[i].LastName;
         row.appendChild(lncol);
 
         var ccol = document.createElement("td");
-        ccol.innerHTML = studentsList[i].country;
+        ccol.innerHTML = studentsList[i].EnrollmentDate;
         row.appendChild(ccol);
+
+        var ecol = document.createElement("td");
+        ecol.innerHTML = "<a href=\"StudentEdit.html\">Edit</a>";
+        row.appendChild(ecol);
+
+        var dcol = document.createElement("td");
+        ecol.innerHTML = "Delete";
+        row.appendChild(dcol);
 
         studentTable.appendChild(row);
     }

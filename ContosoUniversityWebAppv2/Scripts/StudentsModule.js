@@ -4,8 +4,8 @@
         getStudents: function (callback) {
             $.ajax({
                 type: "GET",
-                dataType: "jsonp",
-                url: "http://api.uinames.com/?amount=25",
+                dataType: "json",
+                url: "http://localhost:65326/api/Student",
                 success: function (data) {
                     console.log(data);
                     callback(data);

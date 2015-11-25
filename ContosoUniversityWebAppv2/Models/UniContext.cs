@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -16,7 +17,7 @@ namespace ContosoUniversityWebAppv2.Models
             public MyConfig()
             {
                 this.AutomaticMigrationsEnabled = true;
-                this.AutomaticMigrationDataLossAllowed = true;
+                //this.AutomaticMigrationDataLossAllowed = true;
             }
 
             protected override void Seed(UniContext context)
@@ -184,18 +185,25 @@ namespace ContosoUniversityWebAppv2.Models
                     }
                 }
                 context.SaveChanges();
-
+                Console.Out.WriteLine("after seed method");
             }
         }
 
-        public UniContext() : base("name=UniContext")
+        public UniContext() : base("UniContext")
         {
+            Console.Out.WriteLine("before setinitializer method");
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<UniContext, MyConfig>());
+            Console.Out.WriteLine("after setinitializer method");
         }
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Department> Departments { get; set; }
+
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }*/
     }
 }
