@@ -25,13 +25,22 @@ function setupStudentsTable(studentsList) {
         ccol.innerHTML = studentsList[i].EnrollmentDate;
         row.appendChild(ccol);
 
-        var ecol = document.createElement("td");
-        ecol.innerHTML = "<a href=\"StudentEdit.html\">Edit</a>";
-        row.appendChild(ecol);
-
         var dcol = document.createElement("td");
-        ecol.innerHTML = "Delete";
+        dcol.innerHTML = "Delete";
         row.appendChild(dcol);
+
+        var ecol = document.createElement("td");
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Edit");
+        a.appendChild(linkText);
+        a.title = "Edit";
+        a.href = "StudentEdit.html?id=" + studentsList[i].ID;
+        //a.setAttribute("href", "StudentEdit.html");
+        //a.innerHTML = "Edit";
+        //ecol.innerHTML = a;
+        //ecol.innerHTML = "<a href=\"StudentEdit.html\">Edit</a>";
+        //ecol.appendChild(a);
+        row.appendChild(a);
 
         studentTable.appendChild(row);
     }
