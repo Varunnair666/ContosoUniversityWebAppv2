@@ -14,6 +14,10 @@ function setupDepartmentsTable(departmentsList) {
     for (i = 0; i < departmentsList.length; i++) {
         var row = document.createElement("tr");
 
+        var didcol = document.createElement("th");
+        didcol.innerHTML = departmentsList[i].ID;
+        row.appendChild(didcol);
+
         var dncol = document.createElement("th");
         dncol.innerHTML = departmentsList[i].DepartmentName;
         row.appendChild(dncol);

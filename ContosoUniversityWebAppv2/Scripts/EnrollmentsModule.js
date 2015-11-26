@@ -5,7 +5,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Enrollment",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Enrollment",
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -18,7 +18,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Enrollment/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Enrollment/" + id,
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -28,22 +28,34 @@
         },
 
         addEnrollment: function (enrollment) {
-
-        },
-
-        updateEnrollment: function (id, enrollment) {
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                url: "http://localhost:65326/api/Enrollment/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Enrollment/" + id,
                 data: JSON.stringify(course),
                 dataType: "json",
                 success: function (msg) {
                     alert('Success');
-                },
-                error: function (err) {
-                    alert('Error');
                 }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
+            });
+        },
+
+        updateEnrollment: function (id, enrollment) {
+            $.ajax({
+                type: "PUT",
+                contentType: "application/json; charset=utf-8",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Enrollment/" + id,
+                data: JSON.stringify(course),
+                dataType: "json",
+                success: function (msg) {
+                    alert('Success');
+                }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
             });
 
         },

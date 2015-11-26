@@ -8,6 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/CoursesModule.js"></script>
     <script src="Scripts/Courses.js"></script>
+    <script src="Scripts/facebooklogin.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background-color:#ffffcc">
@@ -27,7 +28,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
                 </ul>
             </div>
         </div>

@@ -175,6 +175,7 @@
     <Content Include="Scripts\CoursesModule.js" />
     <Content Include="Scripts\Departments.js" />
     <Content Include="Scripts\DepartmentsModule.js" />
+    <Content Include="Scripts\Enrollments.js" />
     <Content Include="Scripts\EnrollmentsModule.js" />
     <Content Include="Scripts\facebooklogin.js" />
     <Content Include="Scripts\index.js" />

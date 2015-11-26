@@ -8,6 +8,7 @@
     <script src="Scripts/DepartmentsModule.js"></script>
     <script src="Scripts/CoursesModule.js"></script>
     <script src="Scripts/Departments.js"></script>
+    <script src="Scripts/facebooklogin.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
@@ -28,7 +29,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
                 </ul>
             </div>
         </div>
@@ -39,6 +40,7 @@
         <table class="table table-striped spaced-table">
             <thead>
                 <tr>
+                    <th>Department ID:</th>
                     <th>Department Name:</th>
                     <th>Department Description:</th>
                 </tr>

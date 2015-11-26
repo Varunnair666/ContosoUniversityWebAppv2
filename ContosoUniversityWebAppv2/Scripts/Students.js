@@ -13,6 +13,10 @@ function setupStudentsTable(studentsList) {
     for (i = 0; i < studentsList.length; i++) {
         var row = document.createElement("tr");
 
+        var idcol = document.createElement("td");
+        idcol.innerHTML = studentsList[i].ID;
+        row.appendChild(idcol);
+
         var fncol = document.createElement("td");
         fncol.innerHTML = studentsList[i].FirstName;
         row.appendChild(fncol);

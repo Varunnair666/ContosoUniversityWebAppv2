@@ -25,12 +25,14 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <!--<li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                    <li><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
                 </ul>
                 
             </div>
         </div>
     </nav>
+    <div id="status"></div>
     
 </body>
 </html>

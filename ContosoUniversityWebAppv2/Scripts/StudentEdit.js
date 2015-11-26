@@ -26,6 +26,11 @@
 
         StudentModule.updateStudent(oldID, dataToSend);
     });
+
+    document.getElementById("delete").addEventListener("click", function () {
+        var oldID = localStorage.getItem("OldID");
+        StudentModule.deleteStudent(oldID);
+    });
     loadTheStudent();
 });
 
@@ -70,7 +75,7 @@ function setPlaceHolders(studentInfo) {
     //alert("after localStorage");
 }
 
-document.getElementById("submit").addEventListener("click", function () {
+/*document.getElementById("submit").addEventListener("click", function () {
     var dataToSend = new Object();
     alert("In submit click function");
     var oldID = localStorage.getItem("OldID");
@@ -87,4 +92,4 @@ document.getElementById("submit").addEventListener("click", function () {
     };
 
     StudentModule.updateStudent(old.ID, dataToSend);
-});
+});*/
