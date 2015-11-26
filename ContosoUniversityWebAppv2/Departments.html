@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/DepartmentsModule.js"></script>
+    <script src="Scripts/CoursesModule.js"></script>
+    <script src="Scripts/Departments.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
@@ -21,14 +24,28 @@
                     <li><a href="Students.html">Students</a></li>
                     <li class="active"><a href="Departments.html">Departments</a></li>
                     <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Enrollments.html">Enrollments</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <h2 style="text-align:center; font-family:'Baskerville Old Face'">Departments</h2><br>
+        <table class="table table-striped spaced-table">
+            <thead>
+                <tr>
+                    <th>Department Name:</th>
+                    <th>Department Description:</th>
+                </tr>
+            </thead>
+            <tbody id="departmentsList"></tbody>
+        </table>
+    </div>
 
 </body>
 </html>

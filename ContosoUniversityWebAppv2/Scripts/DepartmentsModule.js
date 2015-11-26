@@ -5,7 +5,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Department",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Department",
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -18,7 +18,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Department/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Department/" + id,
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -28,28 +28,49 @@
         },
 
         addDepartment: function (department) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Department/" + id,
+                data: JSON.stringify(department),
+                dataType: "json",
+                success: function (msg) {
+                    alert('Success');
+                }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
+            });
 
         },
 
         updateDepartment: function (id, department) {
             $.ajax({
-                type: "POST",
+                type: "PUT",
                 contentType: "application/json; charset=utf-8",
-                url: "http://localhost:65326/api/Department/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Department/" + id,
                 data: JSON.stringify(department),
                 dataType: "json",
                 success: function (msg) {
                     alert('Success');
-                },
-                error: function (err) {
-                    alert('Error');
                 }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
             });
 
         },
 
         deleteDepartment: function (id) {
-
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Department/" + id,
+                success: function (data) {
+                    console.log(data);
+                    callback(data);
+                }
+            });
         }
     };
 }());

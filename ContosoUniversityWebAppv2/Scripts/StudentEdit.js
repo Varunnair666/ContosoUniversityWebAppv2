@@ -13,7 +13,7 @@
 
         //alert("new last name: " + newLName );
 
-        alert(Number.parseInt(oldID));
+        //alert(Number.parseInt(oldID));
         
         dataToSend = {
             ID: Number.parseInt(oldID),

@@ -5,7 +5,8 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Student",
+                //url: "http://localhost:65326/api/Student",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Student",
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -18,7 +19,8 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:65326/api/Student/" + id,
+                //url: "http://localhost:65326/api/Student/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Student/" + id,
                 success: function (data) {
                     console.log(data);
                     callback(data);
@@ -31,38 +33,49 @@
             $.ajax({
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                url: "http://localhost:65326/api/Student/",
+                //url: "http://localhost:65326/api/Student/",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Student",
                 data: JSON.stringify(student),
                 dataType: "json",
                 success: function (msg) {
                     alert('Success');
-                },
-                error: function (err) {
-                    alert('Error');
                 }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
             });
 
         },
 
         updateStudent: function (id, student) {
-            alert("In update student");
+            //alert("In update student");
             $.ajax({
                 type: "PUT",
                 contentType: "application/json; charset=utf-8",
-                url: "http://localhost:65326/api/Student/" + id,
+                //url: "http://localhost:65326/api/Student/" + id,
+                url: "https://universityofcontosov3.azurewebsites.net/api/Student/" + id,
                 data: JSON.stringify(student),
                 dataType: "json",
                 success: function (msg) {
                     alert('Success');
-                },
-                error: function (err) {
-                    alert('Error');
                 }
+                /*error: function (err) {
+                    alert('Error');
+                }*/
             });
 
         },
 
         deleteStudent: function (id) {
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "https://universityofcontosov3.azurewebsites.net/api/Student/" + id,
+                success: function (data) {
+                    console.log(data);
+                    callback(data);
+                }
+            });
 
         }
     };

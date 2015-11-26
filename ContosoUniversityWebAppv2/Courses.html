@@ -6,6 +6,8 @@
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/CoursesModule.js"></script>
+    <script src="Scripts/Courses.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background-color:#ffffcc">
@@ -21,14 +23,31 @@
                     <li><a href="Students.html">Students</a></li>
                     <li><a href="Departments.html">Departments</a></li>
                     <li class="active"><a href="Courses.html">Courses</a></li>
+                    <li><a href="Enrollments.html">Enrollments</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <h2 style="text-align:center; font-family:'Baskerville Old Face'">List of all Courses</h2><br>
+        <table class="table table-striped spaced-table">
+            <thead>
+                <tr>
+                    <th>Course ID:</th>
+                    <th>Course Name:</th>
+                    <th>Description:</th>
+                    <th>Department:</th>
+                    <th>Credits:</th>
+                </tr>
+            </thead>
+            <tbody id="coursesList"></tbody>
+        </table>
+    </div>
 
 </body>
 </html>
